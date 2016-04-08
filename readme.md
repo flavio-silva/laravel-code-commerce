@@ -1,4 +1,4 @@
-# Entregas do Módulo Laravel Express - CodeEducation
+# Entregas do Módulo Laravel - CodeCommerce
 
 #### Passos para instalação das bibliotecas de terceiro (front-end)
 

@@ -21,24 +21,26 @@
 
             .container {
                 text-align: center;
-                display: table-cell;
+                /*display: table-cell;*/
                 vertical-align: middle;
             }
 
             .content {
-                text-align: center;
-                display: inline-block;
+                text-align: left;
+                /*display: inline-block;*/
             }
 
             .title {
-                font-size: 96px;
+                font-size: 50px;
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">CODE COMMERCE</div>
+                @yield('content')
             </div>
         </div>
     </body>

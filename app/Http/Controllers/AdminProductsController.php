@@ -21,4 +21,34 @@ class AdminProductsController extends Controller
         $products = $this->product->all();
         return view('admin.products.index', ['products' => $products]);
     }
+
+    public function show()
+    {
+
+    }
+
+    public function store()
+    {
+
+    }
+
+    public function destroy()
+    {
+
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function create()
+    {
+
+    }
+
+    public function edit()
+    {
+        
+    }
 }

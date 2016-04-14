@@ -22,4 +22,34 @@ class AdminCategoriesController extends Controller
         
         return view('admin.categories.index')->with('categories', $categories);
     }
+
+    public function show()
+    {
+
+    }
+
+    public function store()
+    {
+
+    }
+
+    public function destroy()
+    {
+
+    }
+
+    public function update()
+    {
+        
+    }
+
+    public function create()
+    {
+
+    }
+
+    public function edit()
+    {
+        
+    }
 }

@@ -19,7 +19,7 @@ Route::pattern('id', '\d+');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::group(['prefix' => 'categories'], function() {
-        Route::get('', ['as' => 'categoriesIndex', 'uses' => 'AdminCategoriesController@index']);
+        Route::get('', ['as' => 'categories.index', 'uses' => 'AdminCategoriesController@index']);
         Route::get('create', ['as' => 'categories.create', 'uses' => 'AdminCategoriesController@create']);
         Route::get('{id}', ['as' => 'categories.show', 'uses' => 'AdminCategoriesController@show']);
         Route::get('edit/{id}', ['as' => 'categories.edit', 'uses' => 'AdminCategoriesController@edit']);
@@ -29,7 +29,7 @@ Route::group(['prefix' => 'admin'], function() {
     });
 
     Route::group(['prefix' => 'products'], function() {
-        Route::get('', ['as' => 'productsIndex', 'uses' => 'AdminProductsController@index']);
+        Route::get('', ['as' => 'products.index', 'uses' => 'AdminProductsController@index']);
         Route::get('create', ['as' => 'products.create', 'uses' => 'AdminProductsController@create']);
         Route::get('{id}', ['as' => 'products.show', 'uses' => 'AdminProductsController@show']);
         Route::get('edit/{id}', ['as' => 'products.edit', 'uses' => 'AdminProductsController@edit']);

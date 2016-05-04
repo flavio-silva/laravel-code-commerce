@@ -17,8 +17,9 @@ class CreateProductsTable extends Migration
            $table->string('name', 80);
            $table->text('description');
            $table->float('price', 10,2);
+           $table->boolean('featured');
+           $table->boolean('recommend');
            $table->timestamps();
-
        });
     }
 

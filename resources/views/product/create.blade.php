@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-        <h1>Create Category</h1>
+        <h1>Create Product</h1>
         @if ($errors->any())
 
                 @foreach($errors->all() as $error)

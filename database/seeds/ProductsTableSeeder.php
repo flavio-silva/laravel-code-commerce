@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use CodeCommerce\Product;
 
 class ProductsTableSeeder extends Seeder
 {
@@ -11,6 +12,7 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\CodeCommerce\Product::class, 10)->create();
+        Product::truncate();
+        factory(Product::class, 10)->create();
     }
 }

@@ -28,7 +28,8 @@ class Product extends Request
             'description' => 'required|min:5|max:1024',
             'price' => 'required|numeric',
             'featured' => 'boolean',
-            'recommend' => 'boolean'
+            'recommend' => 'boolean',
+            'category_id' => 'required|exists:categories,id'
         ];
     }
 }

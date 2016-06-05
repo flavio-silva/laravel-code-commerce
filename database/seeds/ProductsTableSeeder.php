@@ -12,7 +12,9 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
+        \DB::statement('set foreign_key_checks=0');
         Product::truncate();
-        factory(Product::class, 10)->create();
+        factory(Product::class, 40)->create();
+        \DB::statement('set foreign_key_checks=1');
     }
 }

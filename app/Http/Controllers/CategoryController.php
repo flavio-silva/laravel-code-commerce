@@ -18,7 +18,7 @@ class CategoryController extends Controller
 
     public function index()
     {
-        $categories = $this->model->all();
+        $categories = $this->model->paginate(10);
         return view('category.index', compact('categories'));
     }
 

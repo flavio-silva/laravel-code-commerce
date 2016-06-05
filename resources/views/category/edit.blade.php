@@ -24,7 +24,12 @@
         </div>
         <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
-        {!! Form::close() !!}
         </div>
+
+        <div class="form-group">
+                <a href="{{route('category.index')}}" class="btn btn-default form-control">Back</a>
+        </div>
+
+        {!! Form::close() !!}
 </div>
 @endsection

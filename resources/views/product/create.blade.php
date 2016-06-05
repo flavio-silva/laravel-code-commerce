@@ -12,10 +12,15 @@
                 </div>
                 @endforeach
         @endif
-        {!! Form::open(['url' => 'product']) !!}
+        {!! Form::open(['route' => 'product.index']) !!}
         <div class="form-group">
                 {!! Form::label('name', 'Name:') !!}
                 {!! Form::text('name', null, ['class' => 'form-control']) !!}
+        </div>
+
+        <div class="form-group">
+                {!! Form::label('category_id', 'Category:') !!}
+                {!! Form::select('category_id', $categories, null, ['placeholder' => 'Select a category ', 'class' => 'form-control']) !!}
         </div>
 
         <div class="form-group">
@@ -40,7 +45,12 @@
 
         <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
-        {!! Form::close() !!}
         </div>
+
+        <div class="form-group">
+            <a href="{{route('product.index')}}" class="btn btn-default form-control">Back</a>
+        </div>
+
+    {!! Form::close() !!}
 </div>
 @endsection

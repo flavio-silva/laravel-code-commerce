@@ -12,16 +12,18 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Category</th>
                 <th>Description</th>
                 <th>Price</th>
                 <th>Featured</th>
                 <th>Recommend</th>
                 <th>Action</th>
             </tr>
-            @foreach($categories as $product)
+            @foreach($products as $product)
             <tr>
                 <td>{{$product->id}}</td>
                 <td>{{$product->name}}</td>
+                <td>{{$product->category->name}}</td>
                 <td>{{$product->description}}</td>
                 <td>{{$product->price}}</td>
                 <td>
@@ -38,10 +40,14 @@
                         {{'No'}}
                     @endif
                 </td>
-                <td><a href="{{route('product.destroy', ['id' => $product->id])}}">Delete</a> </td>
-                <td><a href="{{route('product.edit', ['id' => $product->id])}}">Edit</a> </td>
+                <td>
+                    <a href="{{route('product.destroy', ['id' => $product->id])}}">Delete</a>
+                    |
+                    <a href="{{route('product.edit', ['id' => $product->id])}}">Edit</a>
+                </td>
             </tr>
             @endforeach
         </table>
+    {!! $products->render()!!}
 </div>
 @endsection

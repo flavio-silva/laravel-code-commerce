@@ -41,6 +41,8 @@
                     @endif
                 </td>
                 <td>
+                    <a href="{{route('product.image.index', ['id' => $product->id])}}">Images</a>
+                    |
                     <a href="{{route('product.destroy', ['id' => $product->id])}}">Delete</a>
                     |
                     <a href="{{route('product.edit', ['id' => $product->id])}}">Edit</a>

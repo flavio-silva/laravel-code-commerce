@@ -62,14 +62,15 @@ class ProductImageController extends Controller
     public function destroy($id, Storage $storage)
     {
         $image = $this->model->find($id);
-        $filename = "{$image->id}.{$image->extension}";
+        $filename = public_path('uploads') . DIRECTORY_SEPARATOR ."{$image->id}.{$image->extension}";
 
         if(file_exists($filename)) {
-            $storage->disk('public_local')->delete($filename);
+            $storage->disk('public_local')->delete("{$image->id}.{$image->extension}");
         }
 
         $productId = $image->product->id;
         $image->delete();
+
         return redirect()->route('product.image.index', ['id' => $productId]);
     }
 
